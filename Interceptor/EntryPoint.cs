@@ -112,7 +112,7 @@
                         // Replace with spoofed response
                         var spoofedResponse = new StringBuilder();
                         spoofedResponse.AppendLine("HTTP/1.1 200 OK");
-                        spoofedResponse.AppendLine("Date: Tue, 04 Dec 2018 17:05:41 GMT");
+                        spoofedResponse.AppendLine("Date: Fri, 01 Feb 2019 01:05:41 GMT");
                         spoofedResponse.AppendLine("Content-Type: application/json;charset=utf8");
                         spoofedResponse.AppendLine("Content-Length: 453");
                         spoofedResponse.AppendLine("Connection: keep-alive");
@@ -121,7 +121,7 @@
                         spoofedResponse.AppendLine("X-Content-Type-Options: nosniff");
                         spoofedResponse.AppendLine("Server: elb");
                         spoofedResponse.AppendLine("");
-                        spoofedResponse.Append("{\"status\":\"0\",\"autoPollingCycle\":\"1\",\"components\":[{\"name\":\"BKL-L09 9.0.0.159(C432E4R1P9)-FULL\",\"version\":\"BKL-L09 9.0.0.159(C432E4R1P9)\",\"versionID\":\"199267\",\"description\":\"\u3010\u5546\u7528\u53D1\u5E03\u3011\u3010\u5168\u91CF\u5305\u3011Berkeley-L09-OTA 9.0.0.159&#40;C432-9.0.0.159&#41;&#40;2018/9/18&#41;-- Google \u8865\u4E01\u6D4B\u8BD5\u7EC4\",\"createTime\":\"2018-11-29T08:19:25+0000\",\"url\":\"http://update.hicloud.com:8180/TDS/data/files/p3/s15/G3536/g1699/v199267/f1/\"}]}");
+                        spoofedResponse.Append("{\"status\":\"0\",\"autoPollingCycle\":\"1\",\"components\":[{\"name\":\"BKL-L04 9.0.0.202(C567E6R1P12B202)-FULL\",\"version\":\"BKL-L04 9.0.0.202(C567E6R1P12B202)\",\"versionID\":\"220933\",\"description\":\"\u3010\u5546\u7528\u53D1\u5E03\u3011\u3010\u5168\u91CF\u5305\u3011Berkeley-L04-OTA 9.0.0.202&#40;C567-9.0.0.202&#41;&#40;2018/9/18&#41;-- Google \u8865\u4E01\u6D4B\u8BD5\u7EC4\",\"createTime\":\"2019-01-29T08:19:25+0000\",\"url\":\"http://update.hicloud.com:8180/TDS/data/files/p3/s15/G3536/g1699/v220933/f1/\"}]}");
 
                         var spoofedResponseData = Encoding.ASCII.GetBytes(spoofedResponse.ToString());
                         Marshal.Copy(spoofedResponseData, 0, buffer, spoofedResponseData.Length);
